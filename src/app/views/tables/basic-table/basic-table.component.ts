@@ -1,5 +1,5 @@
 import {Component, HostListener, ViewChild} from '@angular/core';
-import {MdbTableDirective} from 'ng-uikit-pro-standard';
+import {MdbTableDirective} from 'angular-bootstrap-md';
 
 @Component({
   selector: 'app-basic-table',
@@ -7,7 +7,7 @@ import {MdbTableDirective} from 'ng-uikit-pro-standard';
   styleUrls: ['./basic-table.component.scss']
 })
 export class BasicTableComponent {
-    @ViewChild(MdbTableDirective, {static: false}) mdbTable: MdbTableDirective;
+    @ViewChild(MdbTableDirective, {static: true}) mdbTable: MdbTableDirective;
     elements: any = [];
     headElements = ['ID', 'First', 'Last', 'Handle'];
     searchText: string = '';
@@ -23,9 +23,11 @@ export class BasicTableComponent {
     ngOnInit() {
         for (let i = 1; i <= 10; i++) {
             this.elements.push({
-                id: i.toString(), first: 'Wpis ' + i, last: 'Last ' + i, handle: 'Handle ' + i
+                id: i.toString(), first: 'User ' + i, last: 'Last ' + i, handle: 'Handle ' + i
             });
         }
+
+        console.log(this.elements);
         this.mdbTable.setDataSource(this.elements);
         this.previous = this.mdbTable.getDataSource();
     }
