@@ -1,0 +1,25 @@
+.blue-gradient {
+    background: -webkit-linear-gradient(50deg, #45cafc, #303f9f);
+    background: linear-gradient(40deg, #45cafc, #4285f4);
+  }
+
+  .mt-plus {
+    margin-top: 125px;
+    z-index: -10px;
+}
+
+@media (max-width: 768px) {
+
+    .mt-plus {
+        margin-top: 100px;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}

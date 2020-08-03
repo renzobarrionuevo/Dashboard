@@ -1,0 +1,32 @@
+
+<app-stats-card></app-stats-card>
+
+
+<!--Grid row-->
+<div class="row wow fadeIn mt-5">
+
+    <!--Grid column-->
+    <div class="col-md-12 mb-4">
+
+        <!--Card-->
+        <mdb-card>
+
+            <!--Card content-->
+            <mdb-card-body>
+
+                <div style="display: block; background-color: white;">
+                    <canvas mdbChart [chartType]="chart3Type" [datasets]="chartDatasets" [labels]="chartLabels"
+                            [colors]="chartColors" [options]="chartOptions"
+                            [legend]="true">
+                    </canvas>
+                </div>
+            </mdb-card-body>
+
+        </mdb-card>
+        <!--/.Card-->
+
+    </div>
+    
+
+</div>
+
